@@ -1,0 +1,12 @@
+extends: "base.yaml"
+
+experiment:
+  name: "e3c_pinn_N500"
+  type: "inverse"
+
+data:
+  n_observations: 500
+
+inverse:
+  init_lambda_1: 0.0
+  init_lambda_2: 0.0

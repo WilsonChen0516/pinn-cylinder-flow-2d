@@ -1,0 +1,15 @@
+extends: "base.yaml"
+
+experiment:
+  name: "e3e_mlp_N5000"
+  type: "mlp_baseline"
+
+data:
+  n_observations: 5000
+
+# MLP baseline: no PDE loss, no L-BFGS (faster, since data-only is easier)
+training:
+  adam_steps: 50000
+  adam_lr: 1.0e-3
+  adam_lr_final: 1.0e-5
+  lbfgs_steps: 0    # skip L-BFGS for MLP

@@ -1,0 +1,13 @@
+{
+  "run_name": "e1_ablation_A_baseline",
+  "experiment_type": "forward",
+  "total_training_time_sec": 15911.508218288422,
+  "final_step": 52000,
+  "validation": {
+    "relative_l2_u": 0.010144733715604285,
+    "relative_l2_v": 0.038986366108576434,
+    "relative_l2_p": 0.451784346022654,
+    "rmse_u": 0.009171593934297562,
+    "rmse_v": 0.010790986940264702
+  }
+}

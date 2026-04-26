@@ -1,0 +1,14 @@
+extends: "base.yaml"
+
+experiment:
+  name: "e3f_mlp_N500"
+  type: "mlp_baseline"
+
+data:
+  n_observations: 500
+
+training:
+  adam_steps: 50000
+  adam_lr: 1.0e-3
+  adam_lr_final: 1.0e-5
+  lbfgs_steps: 0

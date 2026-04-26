@@ -1,0 +1,17 @@
+{
+  "run_name": "e2_inverse_N5000",
+  "experiment_type": "inverse",
+  "total_training_time_sec": 15164.126517772675,
+  "final_step": 55000,
+  "validation": {
+    "relative_l2_u": 0.003371008106402026,
+    "relative_l2_v": 0.011073474956491677,
+    "relative_l2_p": 0.07801908537254779,
+    "rmse_u": 0.003047642298042774,
+    "rmse_v": 0.003065012861043215
+  },
+  "lambda_1_identified": 1.0005369186401367,
+  "lambda_2_identified": 0.010317007079720497,
+  "lambda_1_error_pct": 0.053691864013618175,
+  "lambda_2_error_pct": 3.170070796887962
+}

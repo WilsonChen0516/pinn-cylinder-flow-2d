@@ -1,0 +1,18 @@
+extends: "base.yaml"
+
+experiment:
+  name: "e2_inverse_N5000"
+  type: "inverse"
+
+data:
+  n_observations: 5000
+
+# Initial guess for learnable λ's (Raissi: start from 0)
+inverse:
+  init_lambda_1: 0.0
+  init_lambda_2: 0.0
+
+# For inverse, no IC/BC loss weights used
+loss_weights:
+  data: 1.0
+  pde: 1.0

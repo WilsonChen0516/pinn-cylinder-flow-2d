@@ -1,0 +1,66 @@
+# =============================================================
+# Python
+# =============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.eggs/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# =============================================================
+# Project: PINN cylinder wake
+# =============================================================
+
+# Raw data — too large + has copyright considerations
+data/cylinder_nektar_wake.mat
+data/*.mat
+data/*.npz
+
+# Training checkpoints (.pt files are 100s of MB total)
+results/*/checkpoints/
+results/*/*.pt
+
+# Large numpy caches
+figures/vorticity_gt.npy
+*.npy
+
+# Training logs (large, regenerable)
+results/*/logs/
+
+# Optional: original mp4 if you only want gif on GitHub
+# Uncomment if your mp4 are too large
+figures/*.mp4
+
+# =============================================================
+# Outputs we DO want to keep:
+# =============================================================
+# - results/*/metrics.json (small, evidence of results)
+# - results/*/history.json (small, for loss curves)
+# - results/*/config_snapshot.yaml (small, reproducibility)
+# - figures/*.png, *.gif (final visualizations)

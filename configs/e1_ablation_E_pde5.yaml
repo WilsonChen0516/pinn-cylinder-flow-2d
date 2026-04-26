@@ -1,0 +1,27 @@
+extends: "base.yaml"
+
+experiment:
+  name: "e1_ablation_E_pde5"
+  type: "forward"
+
+data:
+  n_ic_points: 5000
+  n_bc_spatial: 100
+  n_bc_times: 50
+  n_collocation: 20000
+
+# Ablation E: PDE residual emphasized
+# Hypothesis: stronger physics constraint may improve pressure field
+# at the cost of u, v fitting accuracy
+loss_weights:
+  data: 1.0
+  pde: 5.0
+  ic: 1.0
+  bc: 1.0
+
+training:
+  adam_lr: 1.0e-3
+  adam_lr_final: 5.0e-5
+  lbfgs_lr: 1.0
+
+snapshot_for_animation: false

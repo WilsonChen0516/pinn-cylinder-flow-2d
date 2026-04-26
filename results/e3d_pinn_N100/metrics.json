@@ -1,0 +1,17 @@
+{
+  "run_name": "e3d_pinn_N100",
+  "experiment_type": "inverse",
+  "total_training_time_sec": 6597.3785037994385,
+  "final_step": 52000,
+  "validation": {
+    "relative_l2_u": 0.4845006944930485,
+    "relative_l2_v": 1.7389387059483703,
+    "relative_l2_p": 2.5037323305679235,
+    "rmse_u": 0.438024640083313,
+    "rmse_v": 0.4813186228275299
+  },
+  "lambda_1_identified": 0.16408558189868927,
+  "lambda_2_identified": 0.033002935349941254,
+  "lambda_1_error_pct": 83.59144181004747,
+  "lambda_2_error_pct": 230.0293534764096
+}

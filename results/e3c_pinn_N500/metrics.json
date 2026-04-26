@@ -1,0 +1,17 @@
+{
+  "run_name": "e3c_pinn_N500",
+  "experiment_type": "inverse",
+  "total_training_time_sec": 7957.784225225449,
+  "final_step": 52000,
+  "validation": {
+    "relative_l2_u": 0.03927572731715009,
+    "relative_l2_v": 0.077034238375911,
+    "relative_l2_p": 0.7151361194272176,
+    "rmse_u": 0.035508181899785995,
+    "rmse_v": 0.021322211250662804
+  },
+  "lambda_1_identified": 1.0005155801773071,
+  "lambda_2_identified": 0.01038836594671011,
+  "lambda_1_error_pct": 0.05155801773066133,
+  "lambda_2_error_pct": 3.8836594667127287
+}

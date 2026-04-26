@@ -1,0 +1,13 @@
+{
+  "run_name": "e3f_mlp_N500",
+  "experiment_type": "mlp_baseline",
+  "total_training_time_sec": 238.00658631324768,
+  "final_step": 50000,
+  "validation": {
+    "relative_l2_u": 0.21744121871312658,
+    "relative_l2_v": 1.2049684241464875,
+    "relative_l2_p": 2.9507155317345797,
+    "rmse_u": 0.19658306241035461,
+    "rmse_v": 0.33352166414260864
+  }
+}

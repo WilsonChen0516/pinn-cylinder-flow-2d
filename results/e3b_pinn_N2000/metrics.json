@@ -1,0 +1,17 @@
+{
+  "run_name": "e3b_pinn_N2000",
+  "experiment_type": "inverse",
+  "total_training_time_sec": 9979.59669661522,
+  "final_step": 52000,
+  "validation": {
+    "relative_l2_u": 0.006804123153068221,
+    "relative_l2_v": 0.01923128332051123,
+    "relative_l2_p": 0.21125768536683293,
+    "rmse_u": 0.006151433568447828,
+    "rmse_v": 0.005323002114892006
+  },
+  "lambda_1_identified": 0.9991462230682373,
+  "lambda_2_identified": 0.010431456379592419,
+  "lambda_1_error_pct": 0.08537769317618414,
+  "lambda_2_error_pct": 4.314563795492728
+}

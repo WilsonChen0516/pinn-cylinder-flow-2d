@@ -1,0 +1,13 @@
+{
+  "run_name": "e1_ablation_E_pde5",
+  "experiment_type": "forward",
+  "total_training_time_sec": 15372.323885679245,
+  "final_step": 52000,
+  "validation": {
+    "relative_l2_u": 0.010999030359165335,
+    "relative_l2_v": 0.042055384652190914,
+    "relative_l2_p": 0.6217202360974561,
+    "rmse_u": 0.009943941608071327,
+    "rmse_v": 0.0116404565051198
+  }
+}

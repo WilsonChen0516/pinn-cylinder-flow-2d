@@ -1,0 +1,12 @@
+extends: "base.yaml"
+
+experiment:
+  name: "e3b_pinn_N2000"
+  type: "inverse"
+
+data:
+  n_observations: 2000
+
+inverse:
+  init_lambda_1: 0.0
+  init_lambda_2: 0.0

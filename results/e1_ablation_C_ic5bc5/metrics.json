@@ -1,0 +1,13 @@
+{
+  "run_name": "e1_ablation_C_ic5bc5",
+  "experiment_type": "forward",
+  "total_training_time_sec": 13166.405534744263,
+  "final_step": 52000,
+  "validation": {
+    "relative_l2_u": 0.01142861031662752,
+    "relative_l2_v": 0.044187843194082435,
+    "relative_l2_p": 0.6668485887988563,
+    "rmse_u": 0.010332314297556877,
+    "rmse_v": 0.012230697087943554
+  }
+}

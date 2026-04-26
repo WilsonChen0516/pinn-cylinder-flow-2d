@@ -1,0 +1,35 @@
+seed: 42
+device: cuda
+data:
+  path: data/cylinder_nektar_wake.mat
+  n_observations: 5000
+model:
+  hidden_layers: 8
+  neurons_per_layer: 20
+  activation: tanh
+training:
+  adam_steps: 50000
+  adam_lr: 0.001
+  adam_lr_final: 0.0001
+  lbfgs_steps: 5000
+  lbfgs_history_size: 50
+  lbfgs_max_iter: 20
+  log_every: 500
+  lbfgs_log_every: 100
+loss_weights:
+  data: 1.0
+  pde: 1.0
+  ic: 1.0
+  bc: 1.0
+log_every_history: 100
+val_every: 5000
+ckpt_every: 5000
+lambda_track_every: 100
+snapshot_for_animation: false
+snapshot_every: 2000
+experiment:
+  name: e2_inverse_N5000
+  type: inverse
+inverse:
+  init_lambda_1: 0.0
+  init_lambda_2: 0.0
