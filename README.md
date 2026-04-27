@@ -3,8 +3,7 @@
 使用 Physics-Informed Neural Networks（PINN）求解不可壓縮 Navier-Stokes 方程，
 **復現並延伸** Raissi et al. (2019) 的 2D 圓柱繞流結果。
 
-本專案以 **PyTorch 從零實作**（無 DeepXDE / Modulus 框架），展示 PINN 在三種
-不同設定下的 CFD 求解能力，並透過自主延伸實驗探討 PINN 相對於純資料驅動模型
+本專案以 **PyTorch 從零實作**，展示 PINN不同設定下的 CFD 求解能力，並透過自主延伸實驗探討 PINN 相對於純資料驅動模型
 的優勢。
 
 ---
@@ -26,7 +25,7 @@
 
 ## 三個實驗的技術設計
 
-### 實驗 1：Inverse Problem（復現核心）
+### 實驗 1：Inverse Problem（復現論文）
 
 **設定**：從 5000 個稀疏 (x, y, t, u, v) 觀測點，同時：
 - 重建完整 (u, v, p) 流場（含未觀測的壓力場）
@@ -47,6 +46,17 @@
   <br>
   <em>λ₁, λ₂ 收斂曲線（含 Adam → L-BFGS 兩階段轉折）</em>
 </p>
+由上圖可以發現**λ₁** 從初始值快速上升至 ~0.8 後出現一次明顯回落（step ~1500–2500，最低 ~0.35），
+  隨後單調收斂至真值 1.0，約在 step 10000 後完全穩定。
+<p align="center">
+  <img src="figures/fig_e2_loss.png" width="65%"/>
+  <br>
+  <em>Loss曲線圖（含 Adam → L-BFGS 兩階段轉折）</em>
+</p>
+由λ₁, λ₂ 收斂曲線與Loss 曲線圖可以發現在 1500-2500，期間 PDE residual（綠線）
+  出現一次顯著的隆起，與 λ₁ 的劇烈震盪在
+  時間上完全對應。這代表 PINN 網路正在探索梯度的新方向—— 此時 λ₁ 還沒鎖定正確的對流項係數，PDE residual 自然無法降低；當 λ₁ 開始穩定靠近 1.0 時，PDE residual
+  才隨之下降，total loss 也同步進入下降期。
 <p align="center">
   <img src="figures/anim_e2_ground_truth_vs_pinn_uvp.gif" width="85%"/>
   <br>
