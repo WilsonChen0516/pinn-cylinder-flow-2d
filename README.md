@@ -13,13 +13,13 @@
 <p align="center">
   <img src="figures/anim_e2_ground_truth_vs_pinn_uvp.gif" width="85%"/>
   <br>
-  <em>Inverse problem：5000 個稀疏 (u, v) 觀測 → 完整 (u, v, p) 重建（壓力場無觀測）</em>
+  <em>Inverse problem：5000 個稀疏 (u, v) 觀測 → 完整 (u, v, p) 重建</em>
 </p>
 
 <p align="center">
   <img src="figures/anim_vorticity_e1_vs_e2.gif" width="85%"/>
   <br>
-  <em>Vorticity 對比：Forward 與 Inverse 兩種設定的精度差異（統一 colorbar）</em>
+  <em>Vorticity 對比：Forward 與 Inverse 兩種設定的精度差異</em>
 </p>
 
 
@@ -28,11 +28,8 @@
 ### 實驗 1：Inverse Problem（復現論文）
 
 **設定**：從 5000 個稀疏 (x, y, t, u, v) 觀測點，同時：
-- 重建完整 (u, v, p) 流場（含未觀測的壓力場）
+- 重建完整 (u, v, p) 流場
 - 識別 NS 方程的物理參數 λ₁（convective）, λ₂（viscous）
-
-**關鍵技巧**：觀測點同時作為 PDE collocation 點，data loss 與 PDE residual loss
-在同一批點上「協作」，提供最強的 λ 識別訊號。
 
 **結果**：
 
@@ -62,6 +59,7 @@
   <br>
   <em>Inverse problem：用 5000 筆資料重建整個時空場</em>
 </p>
+
 ---
 
 ### 實驗 2：Data Efficiency Study（自主延伸 #1）
@@ -114,9 +112,9 @@
 
 | 項目 | 值 |
 |:-----|:---|
-| Framework | PyTorch（純，無 DeepXDE/Modulus）|
+| Framework | PyTorch|
 | 模型 | 8 層 × 20 神經元，tanh 激活，Xavier 初始化 |
-| 輸出 | Stream function ψ + pressure p（連續方程自動滿足）|
+| 輸出 | Stream function ψ + Pressure p|
 | 訓練 | Adam (50,000) → L-BFGS (5,000) 兩階段 |
 | Reynolds | 100（Raissi 提供的 cylinder_nektar_wake.mat）|
 | 硬體 | NVIDIA RTX 3060|
