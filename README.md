@@ -117,9 +117,9 @@
 | Framework | PyTorch（純，無 DeepXDE/Modulus）|
 | 模型 | 8 層 × 20 神經元，tanh 激活，Xavier 初始化 |
 | 輸出 | Stream function ψ + pressure p（連續方程自動滿足）|
-| 訓練 | Adam (50,000) → L-BFGS (2,000) 兩階段 |
+| 訓練 | Adam (50,000) → L-BFGS (5,000) 兩階段 |
 | Reynolds | 100（Raissi 提供的 cylinder_nektar_wake.mat）|
-| 硬體 | NVIDIA RTX 3060（單訓練約 2-4 小時）|
+| 硬體 | NVIDIA RTX 3060|
 | Python / CUDA | 3.10 / 12.8 |
 
 ---
